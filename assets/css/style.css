@@ -26,23 +26,37 @@ h1 {
 
 main {
     background-image: url("/assets/img/background.jpg");
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 150px;
 }
 
 .formuContainer {
-    border-style: solid 3px black;
+    border: 5px solid black;
+    border-radius: 25px;
+    box-shadow: 8px 15px 21px 7px rgba(0,0,0,0.43);
+    -webkit-box-shadow: 8px 15px 21px 7px rgba(0,0,0,0.43); 
     background-color: rgba(255, 255, 255, 0.787);
-    width: 500px;
-    padding: 200px;
+    width: 670px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 36px;
+    background-image: url("/assets/img/Ensign_of_France.svg");
+    background-size: 100%;
     
 }
+
+.subButton {
+color: rgb(255, 255, 255); font-size: 20px; line-height: 20px; padding: 11px; border-radius: 16px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); box-shadow: rgba(0, 0, 0, 0.43) 8px 15px 21px 7px; border: 2px solid rgb(28, 110, 164); display: inline-block;}
+.subButton:hover {
+background: #1C6EA4; }
+.subButton:active {
+background: #144E75; }
 
 /* FOOTER */
 

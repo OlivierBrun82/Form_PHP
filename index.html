@@ -15,18 +15,21 @@
         <section class="formuContainer">
             <ul>
                 <li>
-                <form action="pseudo">Pseudo</form>
-                <input type="text">
+                    <!-- L'attribut action permet de définr la destination du formulaire -->
+                    <!-- L'attribut method défini la méthode d'envoi des données -->
+                <form action="pseudo" method="post">Pseudo</form>
+                <label for=""></label>
+                <input type="text" required>
                 </li>
                 <li>
-                <form action="sujet">Sujet</form>
-                <input type="text">
+                <form action="sujet" method="post">Sujet</form>
+                <input type="text" required>
                 <li>
-                <form action="message">Message</form>
-                <input type="text">
+                <form action="message" method="post">Message</form>
+                <input type="text" required>
                 </li>
                 <li>
-                <button type="submit">Submit</button>
+                <button class="subButton" type="submit" method="post">Submit</button>
                 </li>
             </ul>
         </section>
