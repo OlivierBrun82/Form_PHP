@@ -24,8 +24,14 @@
                     <label for="sujet">Sujet</label>
                     <input id="sujet" type="text" name="sujet"  placeholder="Entrer le sujet de votre message">
                    
+                    <label for="email">EMail</label>
+                    <input id="email" type="email" name="email"  placeholder="Entrer votre E-Mail">
+
+                    <label for="phone">Phone</label>
+                    <input id="phone" type="phone" name="phone"  placeholder="Entrer votre Numéro de téléphone">
+
                     <label for="message">Message</label>
-                    <textarea id="message" type="text" name="message"  placeholder="Entrer votre message"></textarea>
+                    <textarea id="message" type="text" name="message" rows="5" cols="30" placeholder="Entrer votre message"></textarea>
             
                     <input class="subButton" type="submit" value="Envoyer">
                 </form>
@@ -50,6 +56,8 @@
 
                 $pseudo = $_POST["pseudo"] ?? '';
                 $sujet = $_POST["sujet"] ?? '';
+                $email = $_POST["email"] ?? '';
+                $phone = $_POST["phone"] ?? '';
                 $message = $_POST["message"] ?? '';
 
                 // 3 valider les données
@@ -60,10 +68,16 @@
                 if(empty($sujet)){
                     $errors[] = "Votre Sujet n'est pas renseigné";
                 }
+                if(empty($email)){
+                    $errors[] = "Votre E-Mail n'est pas renseigné";
+                }
+                 if(empty($phone)){
+                    $errors[] = "Votre Numéro de téléphone n'est pas renseigné";
+                }
                 if(empty($message)){
                     $errors[] = "Votre Message n'est pas renseigné";
                 }
-                var_dump($errors);
+            //   var_dump($errors);
                 // echo $pseudo;
                 // echo $sujet;
                 // echo $message;
@@ -76,15 +90,40 @@
 
             //  NETTOYER LES DONNÉES
             
-            if (empty($errors)) {
-                
+              if (empty($errors)) {
+                // $pseudo= trim($pseudo);
+                // $pseudo= htmlspecialchars($pseudo); =
 
+                $pseudo = htmlspecialchars(trim($pseudo));
+                $sujet = htmlspecialchars(trim($sujet));
+                $email = htmlspecialchars(trim($email));
+                $phone = htmlspecialchars(trim($phone));
+                $message = htmlspecialchars(trim($message));
+                // var_dump("hello world", $pseudo, $sujet, $message);
 
-            }
+                // Renvoyer quelque chose
+              }
+                if (empty($errors)) {
+                    // j'affiche le message
+                    ?> <span><strong> Nous avons pris en compte votre demande avec succés </strong></span>
+                    <?php
 
+                }else{
+                    // j'affiche un message d'erreur
+                    foreach($errors as $error) {
+                      ?>
+                        <div class="error">
+                            <span><?= $error ?></span>
+                        </div>
+                     <?php
+                    }
+                }
 
-            }
             
+            // input mail
+            // input phone (regex)
+            // mes champs de type string ai une taille minimum de 5 characteres et max 255 characteres.
+        }
          ?>
     <footer>
         <span>© All Right Reserved</span>

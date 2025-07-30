@@ -34,18 +34,17 @@ main {
 }
 
 .formuContainer {
-    border: 5px solid black;
+    border: 6px outset #000000;
     border-radius: 25px;
     box-shadow: 8px 15px 21px 7px rgba(0,0,0,0.43);
     -webkit-box-shadow: 8px 15px 21px 7px rgba(0,0,0,0.43); 
     background-color: rgba(255, 255, 255, 0.787);
-    width: 250px;
-    padding: 10px;
+    width: 230px;
+    padding: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    font-size: 36px;
+    font-size: 18px;
     background-image: url("/assets/img/Ensign_of_France.svg");
     background-size: 100%;
     
